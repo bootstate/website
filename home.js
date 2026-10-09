@@ -89,6 +89,6 @@
     else walk(c)})};
   walk(p);
   const words=[...p.querySelectorAll('.w')];
-  function upd(){const r=p.getBoundingClientRect(),vh=innerHeight;const prog=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));const n=Math.round(prog*words.length);words.forEach((w,i)=>w.classList.toggle('on',i<n))}
+  function upd(){const r=p.getBoundingClientRect(),vh=innerHeight;const prog=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));const n=Math.round(prog*words.length);words.forEach((w,i)=>w.classList.toggle('on',i<n));const sec=p.closest('section');sec.style.setProperty('--a',Math.min(1,prog*1.7).toFixed(3));sec.style.setProperty('--b',Math.min(1,Math.max(0,(prog-.5)*2.2)).toFixed(3))}
   addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
 })();
