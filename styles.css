@@ -36,7 +36,7 @@ svg{display:block}
 .fallback::before{content:"";position:absolute;right:100%;top:50%;width:50vw;height:2px;background:linear-gradient(90deg,transparent,var(--copper))}
 .webgl .fallback{display:none}
 .hero-copy{position:absolute;left:var(--g);right:var(--g);bottom:calc(env(safe-area-inset-bottom,0px) + clamp(28px,5vw,56px));display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
-.hero h1{font-size:clamp(30px,3.6vw,52px);line-height:1.08;letter-spacing:-.03em;max-width:15ch}
+.hero h1{font-size:clamp(26px,2.8vw,40px);line-height:1.12;letter-spacing:-.03em;max-width:15ch}
 .hero h1 .it{color:var(--text)}
 .hero-side{display:grid;gap:10px;justify-items:end;text-align:right}
 .hero-side p{font-size:14.5px;color:var(--text);max-width:30ch}
@@ -56,7 +56,7 @@ section{padding-block:clamp(110px,15vw,220px)}
 .kicker i{width:22px;height:1px;background:var(--copper)}
 
 /* manifesto: words warm up from grey to ink as you read */
-.manifesto p{font-size:clamp(28px,3.9vw,56px);line-height:1.14;letter-spacing:-.03em;max-width:24ch}
+.manifesto p{font-size:clamp(21px,2.3vw,32px);line-height:1.35;letter-spacing:-.02em;max-width:34ch}
 .manifesto .w{transition:color .6s ease}
 .js .manifesto .w{color:var(--faint)}
 .js .manifesto .w.on{color:var(--ink)}
@@ -64,14 +64,14 @@ section{padding-block:clamp(110px,15vw,220px)}
 
 /* method: one fine diagram */
 .method-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(56px,7vw,96px)}
-.method-head h2{font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;max-width:18ch}
+.method-head h2{font-size:clamp(22px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em;max-width:18ch}
 .method-head p{color:var(--text);max-width:40ch;font-size:15.5px}
 .flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative}
 .flow::before{content:"";position:absolute;top:44px;left:0;right:0;height:1px;background:var(--rule)}
 .step{position:relative;padding-right:32px;display:grid;gap:28px;align-content:start}
 .step .node{height:88px;display:flex;align-items:center}
 .step .node svg{height:88px;width:auto;overflow:visible}
-.step h3{font-size:22px;letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px}
+.step h3{font-size:18px;letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px}
 .step h3 .it{font-size:24px;color:var(--copper)}
 .step p{color:var(--text);font-size:15px;max-width:30ch}
 @media (max-width:760px){
@@ -84,11 +84,11 @@ section{padding-block:clamp(110px,15vw,220px)}
 
 /* fields: quiet two-column index */
 .fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px 80px}
-.fields h2{font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;max-width:12ch}
+.fields h2{font-size:clamp(22px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em;max-width:12ch}
 .flist{display:grid}
 .flist div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;padding-block:22px;border-top:1px solid var(--rule)}
 .flist div:last-child{border-bottom:1px solid var(--rule)}
-.flist b{font-weight:500;font-size:17px;letter-spacing:-.01em}
+.flist b{font-weight:500;font-size:16px;letter-spacing:-.01em}
 .flist span{color:var(--text);font-size:15px}
 @media (max-width:760px){.fields{grid-template-columns:minmax(0,1fr)}.flist div{grid-template-columns:minmax(0,1fr);gap:4px}}
 
@@ -108,7 +108,7 @@ section{padding-block:clamp(110px,15vw,220px)}
 
 /* work: honest empty state until the first project ships */
 .empty{display:grid;gap:18px;padding-block:40px 44px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.empty h2{font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;max-width:20ch}
+.empty h2{font-size:clamp(22px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em;max-width:20ch}
 .empty p{color:var(--text);max-width:48ch}
 .follow{display:flex;gap:28px;margin-top:8px;font-size:15px}
 .follow a{border-bottom:1px solid var(--faint);padding-bottom:3px;transition:border-color .3s}
@@ -142,16 +142,16 @@ footer{padding:28px var(--g) calc(env(safe-area-inset-bottom,0px) + 28px);displa
 /* inner pages */
 .page-hero{padding-top:clamp(150px,20vw,240px);padding-bottom:clamp(64px,9vw,120px)}
 .page-hero .glyph{width:92px;height:40px;margin-bottom:36px}
-.page-hero h1{font-size:clamp(44px,7vw,104px);line-height:1;letter-spacing:-.045em;max-width:14ch}
+.page-hero h1{font-size:clamp(34px,4.4vw,60px);line-height:1.05;letter-spacing:-.035em;max-width:14ch}
 .page-hero h1 .it{color:var(--text)}
-.page-hero p{margin-top:28px;font-size:clamp(17px,1.5vw,20px);color:var(--text);max-width:46ch}
-.next{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:44px;border-top:1px solid var(--rule);font-size:clamp(24px,3vw,40px);letter-spacing:-.03em;transition:color .3s}
+.page-hero p{margin-top:24px;font-size:clamp(16px,1.3vw,18px);color:var(--text);max-width:46ch}
+.next{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:36px;border-top:1px solid var(--rule);font-size:clamp(19px,1.8vw,24px);letter-spacing:-.03em;transition:color .3s}
 .next:hover{color:var(--copper)}
 .next span{font-size:.8em}
 .more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
 .more a{display:grid;gap:10px;padding:36px 32px 40px 0;border-bottom:1px solid var(--rule);transition:color .3s}
 .more a + a{padding-left:32px;border-left:1px solid var(--rule)}
-.more a b{font-weight:400;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.025em;display:flex;justify-content:space-between;align-items:baseline}
+.more a b{font-weight:400;font-size:clamp(19px,1.7vw,24px);letter-spacing:-.025em;display:flex;justify-content:space-between;align-items:baseline}
 .more a span{color:var(--text);font-size:15px;max-width:38ch}
 .more a:hover b{color:var(--copper)}
 @media (max-width:640px){.more{grid-template-columns:minmax(0,1fr)}.more a + a{padding-left:0;border-left:0}}
@@ -166,7 +166,7 @@ footer{padding:28px var(--g) calc(env(safe-area-inset-bottom,0px) + 28px);displa
 footer{align-items:center}
 footer .soc-row{gap:22px}
 footer a{color:var(--text)} footer a:hover{color:var(--ink)}
-.mail-big{font-size:clamp(26px,3.6vw,52px);letter-spacing:-.03em;justify-self:start;border-bottom:1.5px solid var(--copper);padding-bottom:4px;line-height:1.2;word-break:break-word}
+.mail-big{font-size:clamp(22px,2.4vw,34px);letter-spacing:-.03em;justify-self:start;border-bottom:1.5px solid var(--copper);padding-bottom:4px;line-height:1.2;word-break:break-word}
 .mail-big:hover{color:var(--copper)}
 body{animation:pagein .6s ease both}
 @keyframes pagein{from{opacity:0}to{opacity:1}}

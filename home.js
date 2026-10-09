@@ -36,7 +36,7 @@
   group.add(ring);
 
   // copper wire + arrowhead: the arrow from nowhere
-  const copper=new THREE.MeshStandardMaterial({color:0x9A4A12,roughness:.42,metalness:.25});
+  const copper=new THREE.MeshStandardMaterial({color:0x7E3A0E,roughness:.5,metalness:.12});
   const tip=-(R+T);
   const headLen=.2;
   const wireLen=14;
