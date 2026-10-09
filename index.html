@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BOOTSTATE</title>
+<meta name="description" content="BOOTSTATE is an independent technology lab conducting research and engineering across artificial intelligence, decentralized systems and software.">
+<meta name="theme-color" content="#EEEEEA">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@1,400;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="logo" viewBox="0 -1 915 102">
+    <path d="M0 50H96" stroke="#AA5500" stroke-width="8"/><path d="M88 32L124 50L88 68Z" fill="#AA5500"/>
+    <g transform="translate(140 0)" fill="none" stroke="currentColor" stroke-width="17"><path d="M8.5 0V100M8.5 8.5H36A20 20 0 0 1 36 48.5H8.5M8.5 48.5H38.5A21.5 21.5 0 0 1 38.5 91.5H8.5"/><circle cx="134" cy="50" r="42"/><circle cx="247.5" cy="50" r="42"/><path d="M307 8.5H379M343 8.5V100"/><path d="M449 8.5H420.25A20.75 20.75 0 0 0 420.25 50H425.75A20.75 20.75 0 0 1 425.75 91.5H397"/><path d="M467 8.5H539M503 8.5V100"/><path d="M555.5 100V38A29.5 29.5 0 0 1 614.5 38V100M555.5 62H614.5"/><path d="M631 8.5H703M667 8.5V100"/><path d="M725.5 0V100M725.5 8.5H775M725.5 50H771M725.5 91.5H775"/></g>
+  </symbol>
+  <symbol id="s0" viewBox="0 0 20 12"><path d="M0 6H7" stroke="currentColor" stroke-width="1.3"/><path d="M6 3.2L9.4 6L6 8.8Z" fill="currentColor"/><circle cx="14.5" cy="6" r="4.6" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="s1" viewBox="0 0 20 12"><circle cx="10" cy="6" r="4.6" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="x" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></symbol>
+  <symbol id="gh" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+</defs></svg>
+<header class="top">
+  <a href="index.html" class="logo" aria-label="BOOTSTATE home"><svg viewBox="0 -1 915 102" style="color:var(--ink)"><use href="#logo"/></svg></a>
+  <nav aria-label="Primary"><a href="lab.html">Lab</a><a href="work.html">Work</a><a href="contact.html">Contact</a></nav>
+</header>
+<main>
+  <section class="hero" aria-label="Introduction" style="padding:0">
+    <div class="fallback" aria-hidden="true"></div>
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="hero-copy">
+      <h1 class="rise d1">An independent technology lab. <span class="it">Built from first principles.</span></h1>
+      <div class="hero-side rise d2">
+        <span class="mono"><span class="it" style="text-transform:none;font-size:15px;letter-spacing:0;color:var(--ink)">q₀</span> · Est. 2026</span>
+        <p>Research and engineering across artificial intelligence, decentralized systems and software.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap">
+      <div class="kicker fade"><i></i><span class="mono">The name</span></div>
+      <p id="manifesto">In computer science, every state machine has a single start state: the point where computation begins, before any input has been read. BOOTSTATE is named after it. <span class="it">We begin from first principles and build toward systems that last.</span></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="more fade">
+        <a href="lab.html"><b>The lab <span>→</span></b><span>Our method, our fields and how projects move from idea to release.</span></a>
+        <a href="work.html"><b>Work <span>→</span></b><span>Projects, research and open-source releases.</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <span class="mono">© 2026 BOOTSTATE</span>
+  <div class="soc-row"><a class="soc" href="https://x.com/bootstatehq" target="_blank" rel="noopener noreferrer" aria-label="BOOTSTATE on X"><svg><use href="#x"/></svg></a><a class="soc" href="https://github.com/bootstate" target="_blank" rel="noopener noreferrer" aria-label="BOOTSTATE on GitHub"><svg><use href="#gh"/></svg></a></div>
+</footer>
+<script src="site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="home.js"></script>
+</body>
+</html>

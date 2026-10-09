@@ -1,0 +1,5 @@
+# local drafts and screenshots, not part of the live site
+drafts/
+preview.html
+preview-*.png
+*.png
