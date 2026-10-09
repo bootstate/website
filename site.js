@@ -5,3 +5,10 @@ document.documentElement.classList.add('js');
   document.querySelectorAll('.fade').forEach(el=>io.observe(el));
   setTimeout(()=>document.querySelectorAll('.fade').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}),60);
 })();
+
+/* ---------- copy buttons ---------- */
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const v=b.dataset.copy;
+  try{await navigator.clipboard.writeText(v)}catch(e){const r=document.createRange();r.selectNodeContents(b.previousElementSibling);getSelection().removeAllRanges();getSelection().addRange(r)}
+  b.textContent='Copied';b.classList.add('done');setTimeout(()=>{b.textContent='Copy';b.classList.remove('done')},1800);
+}));

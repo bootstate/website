@@ -12,8 +12,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@1,400;1,500&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
 <div class="grain" aria-hidden="true"></div>
+<div class="stage" aria-hidden="true"><div class="fallback"></div><canvas id="stage"></canvas></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <symbol id="logo" viewBox="0 -1 915 102">
     <path d="M0 50H96" stroke="#AA5500" stroke-width="8"/><path d="M88 32L124 50L88 68Z" fill="#AA5500"/>
@@ -30,8 +31,6 @@
 </header>
 <main>
   <section class="hero" aria-label="Introduction" style="padding:0">
-    <div class="fallback" aria-hidden="true"></div>
-    <canvas id="stage" aria-hidden="true"></canvas>
     <div class="hero-copy">
       <h1 class="rise d1">An independent technology lab. <span class="it">Built from first principles.</span></h1>
       <div class="hero-side rise d2">
@@ -42,27 +41,45 @@
   </section>
 
   <section class="manifesto">
-    <div class="wrap">
+    <div class="wrap name-wrap">
       <div class="kicker fade"><i></i><span class="mono">The name</span></div>
       <p id="manifesto">In computer science, every state machine has a single start state: the point where computation begins, before any input has been read. BOOTSTATE is named after it. <span class="it">We begin from first principles and build toward systems that last.</span></p>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section class="gallery">
+    <canvas id="gallery" aria-hidden="true"></canvas>
     <div class="wrap">
-      <div class="more fade">
-        <a href="lab.html"><b>The lab <span>→</span></b><span>Our method, our fields and how projects move from idea to release.</span></a>
-        <a href="work.html"><b>Work <span>→</span></b><span>Projects, research and open-source releases.</span></a>
+      <div class="g-head fade">
+        <div><div class="kicker"><i></i><span class="mono">Fields</span></div><h2>Four areas. <span class="it">One method.</span></h2></div>
+        <p>We pick problems rather than industries, and work across these fields from first principles.</p>
+      </div>
+      <div class="g-grid">
+        <article class="g-card fade"><div class="g-art" data-obj="facet"></div><h3>Artificial intelligence</h3><p>Applied machine learning, autonomous agents and rigorous evaluation.</p></article>
+        <article class="g-card fade"><div class="g-art" data-obj="links"></div><h3>Decentralized systems</h3><p>Protocols, smart contracts and open network infrastructure.</p></article>
+        <article class="g-card fade"><div class="g-art" data-obj="layers"></div><h3>Software</h3><p>Developer tooling and the systems beneath it.</p></article>
+        <article class="g-card fade"><div class="g-art" data-obj="knot"></div><h3>Emerging technology</h3><p>Hardware, research prototypes and new computing paradigms.</p></article>
       </div>
     </div>
   </section>
+  <section class="index-sec">
+    <div class="wrap">
+      <nav class="index fade" aria-label="Explore">
+        <a href="lab.html"><span class="mono">Method and fields</span><span class="ix-title">The lab</span><svg class="ix-arrow" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 6H20M15 1L20 6L15 11" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a href="work.html"><span class="mono">Projects and releases</span><span class="ix-title">Work</span><svg class="ix-arrow" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 6H20M15 1L20 6L15 11" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a href="contact.html"><span class="mono">Collaboration and press</span><span class="ix-title">Contact</span><svg class="ix-arrow" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 6H20M15 1L20 6L15 11" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+      </nav>
+    </div>
+  </section>
 </main>
-<footer>
+<footer class="slim">
   <span class="mono">© 2026 BOOTSTATE</span>
+  <nav aria-label="Footer"><a href="lab.html">Lab</a><a href="work.html">Work</a><a href="contact.html">Contact</a></nav>
   <div class="soc-row"><a class="soc" href="https://x.com/bootstatehq" target="_blank" rel="noopener noreferrer" aria-label="BOOTSTATE on X"><svg><use href="#x"/></svg></a><a class="soc" href="https://github.com/bootstate" target="_blank" rel="noopener noreferrer" aria-label="BOOTSTATE on GitHub"><svg><use href="#gh"/></svg></a></div>
 </footer>
 <script src="site.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="home.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>

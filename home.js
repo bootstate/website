@@ -51,36 +51,56 @@
   const floor=new THREE.Mesh(new THREE.PlaneGeometry(40,40),new THREE.ShadowMaterial({opacity:0}));
   
 
-  let w=0,h=0,mx=0,my=0,tx=0,ty=0;
+  let w=0,h=0,mx=0,my=0,tx=0,ty=0,narrow=false,bx=0,by=0;
+  copper.transparent=true;
   function size(){
     w=canvas.clientWidth; h=canvas.clientHeight;
     renderer.setSize(w,h,false);
     camera.aspect=w/h;
-    const narrow=w<760;
+    narrow=w<760;
     camera.position.set(0,narrow?.25:.35,narrow?15:9.6);
     camera.lookAt(0,narrow?-.2:.15,0);
-    group.position.set(narrow?.3:.35,narrow?1.15:.38,0);
+    bx=narrow?.3:.35; by=narrow?1.15:.38;
     camera.updateProjectionMatrix();
   }
   addEventListener('resize',size); size();
   addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5)},{passive:true});
 
+  const stage=document.querySelector('.stage');
+  const name=document.querySelector('.manifesto');
   const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp=(v)=>Math.min(1,Math.max(0,v));
+  const ease=(v)=>v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2;
+  let sp=0;
   const t0=performance.now();
   function frame(now){
     const t=(now-t0)/1000;
     mx+=(tx-mx)*.04; my+=(ty-my)*.04;
-    const intro=Math.min(1,t/2.2), e=1-Math.pow(1-intro,4);
-    group.rotation.y=-.32+mx*.28+(1-e)*-.5;
-    group.rotation.x=.12+my*.12;
-    group.position.y+= ((still?0:Math.sin(t*.8)*.035) - (group.userData.f||0)); group.userData.f=still?0:Math.sin(t*.8)*.035;
+    const intro=still?1:Math.min(1,t/2.2), e=1-Math.pow(1-intro,4);
+    // scroll progress across the first screen, smoothed
+    const target=clamp(scrollY/(innerHeight*.9));
+    sp+=(target-sp)*(still?1:.12);
+    const s=ease(sp);
+    const float=still?0:Math.sin(t*.8)*.035;
+    if(narrow){
+      group.position.set(bx, by+s*1.6+float, 0);
+    }else{
+      group.position.set(bx+s*2.05, by-s*.12+float, 0);
+    }
+    const k=1-s*.28; group.scale.set(k,k,k);
+    group.rotation.y=-.32+mx*.28+(1-e)*-.5 - s*.55 + (still?0:sp*Math.sin(t*.25)*.06);
+    group.rotation.x=.12+my*.12+s*.18;
     wire.scale.y=Math.max(.001,e); wire.position.x=tip-headLen-(wireLen*e)/2+.01;
-    head.material.opacity=1;
+    copper.opacity=1-clamp(s*1.8);
+    wire.visible=head.visible=copper.opacity>.01;
+    // fade the object out as the name section leaves the screen
+    if(name){const b=name.getBoundingClientRect().bottom; stage.style.opacity=clamp((b-innerHeight*.25)/(innerHeight*.45)).toFixed(3);}
     renderer.render(scene,camera);
-    if(!still||t<2.4) requestAnimationFrame(frame);
+    requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 })();
+
 /* ---------- manifesto: words warm up as you read ---------- */
 (function(){
   const p=document.getElementById('manifesto');
