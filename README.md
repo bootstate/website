@@ -2,7 +2,7 @@
 
 Source for the BOOTSTATE website, an independent technology lab.
 
-Plain HTML, CSS and JavaScript with no build step. Deployed on Netlify from the `main` branch.
+Plain HTML, CSS and JavaScript with no build step. Deployed on Netlify automatically on every push to `main`.
 
 | File | Purpose |
 |---|---|
