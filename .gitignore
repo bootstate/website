@@ -5,3 +5,5 @@ preview-*.png
 *.png
 preview-scroll.html
 preview-gallery.html
+!og-image.png
+og.html
